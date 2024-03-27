@@ -1,4 +1,4 @@
-package com.cheezycode.daggermvvm
+package com.hilt.hiltmvvm
 
 import org.junit.Test
 
