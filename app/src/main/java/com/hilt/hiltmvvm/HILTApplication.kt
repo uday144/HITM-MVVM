@@ -8,11 +8,7 @@ import javax.inject.Inject
 @HiltAndroidApp
 class HILTApplication : Application()  {
 
-    @Inject
-    lateinit var userRepository: UserRepository
-
     override fun onCreate() {
         super.onCreate()
-        userRepository.saveUser("test@gmail.com",  " rweq")
     }
 }
