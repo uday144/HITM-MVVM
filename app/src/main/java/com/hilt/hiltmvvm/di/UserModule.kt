@@ -1,8 +1,10 @@
 package com.hilt.hiltmvvm.di
 
 import com.example.hiltdi.FirebaseRepository
+import com.example.hiltdi.SQLRepository
 import com.example.hiltdi.UserRepository
 import com.hilt.hiltmvvm.MainFragment
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,10 +14,14 @@ import dagger.hilt.components.SingletonComponent
 
 @InstallIn(ActivityComponent::class)
 @Module
-class UserModule {
+abstract class UserModule {
 
-    @Provides
-    fun provideUserRepository() :  UserRepository{
-        return FirebaseRepository()
-    }
+   /* @Provides
+    fun provideUserRepository(sqlRepository: SQLRepository) :  UserRepository{
+        return sqlRepository
+    }*/
+    // OR
+
+    @Binds
+    abstract fun bindsUserRepository(sqlRepository: SQLRepository) :  UserRepository
 }

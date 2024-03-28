@@ -9,13 +9,13 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.cheezycode.daggermvvm"
+        applicationId "com.hilt.hiltmvvm"
         minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.cheezycode.daggermvvm.CustomRunner"
+        testInstrumentationRunner "com.hilt.hiltmvvm.CustomRunner"
     }
 
     buildTypes {

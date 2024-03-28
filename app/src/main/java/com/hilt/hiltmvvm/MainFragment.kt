@@ -19,9 +19,10 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        userRepository.saveUser("test@gmail.com",  " rweq")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
 
-        userRepository.saveUser("test@gmail.com",  " rweq")
     }
 }
