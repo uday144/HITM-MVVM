@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hiltdi.UserRepository
+import com.hilt.hiltmvvm.di.FirebaseQualifier
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import javax.inject.Named
@@ -14,7 +15,7 @@ import javax.inject.Named
 class MainFragment : Fragment() {
 
     @Inject
-    @Named("firebase")
+    @FirebaseQualifier
     lateinit var userRepository: UserRepository
 
     override fun onCreateView(
