@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import com.example.hiltdi.UserRepository
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
     @Inject
+    @Named("firebase")
     lateinit var userRepository: UserRepository
 
     override fun onCreateView(
