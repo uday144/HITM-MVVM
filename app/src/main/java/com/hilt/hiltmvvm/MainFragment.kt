@@ -12,13 +12,10 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
-    @Inject
-    lateinit var userRepository: UserRepository
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        userRepository.saveUser("test@gmail.com",  " rweq")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_main, container, false)
     }
